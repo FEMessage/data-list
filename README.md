@@ -331,3 +331,9 @@ A. 加载多次和无法加载都是复杂的页面布局导致组件监听的�
   ```
 
 **[⬆ Back to Top](#table-of-contents)**
+
+## License
+
+[MIT](./LICENSE)
+
+**[⬆ Back to Top](#table-of-contents)**
