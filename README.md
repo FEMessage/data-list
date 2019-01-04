@@ -22,6 +22,7 @@
 ## Table of Contents
 
 1.  **[Feature](#feature)**
+2.  **[Documentation](#documentation)**
 2.  **[Quick start](#quick-start)**
 3.  **[Example](#example)**
     * **[basic](#basic)**
@@ -39,6 +40,13 @@
 * 只需配置`url`和`数据在接口返回的路径`即可获取到数据
 * 自带下拉加载更多，分页数据处理
 * 支持存储请求参数，可以向上翻页获取上一页数据，向下获取下一页数据
+
+**[⬆ Back to Top](#table-of-contents)**
+
+## Documentation
+
+* [full api doc](https://femessage.github.io/data-list/)
+* [online demo](https://femessage.github.io/data-list/storybook/)
 
 **[⬆ Back to Top](#table-of-contents)**
 
