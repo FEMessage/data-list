@@ -18,7 +18,7 @@ export default {
   name: 'save-query',
   data() {
     return {
-      url: 'http://yapi.demo.qunar.com/mock/30643/listars/data-list',
+      url: 'https://easy-mock.com/mock/5c323f1b2188f1589db6af5f/data-list',
       query: {
         testType: 'save-query'
       },

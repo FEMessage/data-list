@@ -23,17 +23,17 @@
 
 1.  **[Feature](#feature)**
 2.  **[Documentation](#documentation)**
-2.  **[Quick start](#quick-start)**
-3.  **[Example](#example)**
+3.  **[Quick start](#quick-start)**
+4.  **[Example](#example)**
     * **[basic](#basic)**
     * **[not save query](#not-save-query)**
     * **[slot content](#slot-content)**
     * **[reset](#reset)**
     * **[custorm query](#custorm-query)**
-4.  **[Api](#api)**
-5.  **[Event](#event)**
-6.  **[Slot](#slot)**
-7.  **[FAQ](#faq)**
+5.  **[Api](#api)**
+6.  **[Event](#event)**
+7.  **[Slot](#slot)**
+8.  **[FAQ](#faq)**
 
 ## Feature
 
@@ -84,13 +84,13 @@ yarn add @femessage/data-list
   </data-list>
 </template>
 <script>
-import DataList from 'data-list'
+import DataList from '@femessage/data-list'
 export default {
   name: 'data-list',
   components: {DataList},
   data() {
     return {
-      url: 'http://yapi.demo.qunar.com/mock/30643/listars/data-list'
+      url: 'https://easy-mock.com/mock/5c323f1b2188f1589db6af5f/data-list'
     }
   }
 }
@@ -115,13 +115,13 @@ export default {
   </data-list>
 </template>
 <script>
-import DataList from 'data-list'
+import DataList from '@femessage/data-list'
 export default {
   name: 'basic',
   components: {DataList},
   data() {
     return {
-      url: 'http://yapi.demo.qunar.com/mock/30643/listars/data-list',
+      url: 'https://easy-mock.com/mock/5c323f1b2188f1589db6af5f/data-list',
       dataPath: 'payload.content' // 渲染组件的分页数据在接口返回的数据中的路径, 嵌套对象使用.表示即可
     }
   }
@@ -145,13 +145,13 @@ export default {
   </data-list>
 </template>
 <script>
-import DataList from 'data-list'
+import DataList from '@femessage/data-list'
 export default {
   name: 'no-save-query',
   components: {DataList},
   data() {
     return {
-      url: 'http://yapi.demo.qunar.com/mock/30643/listars/data-list',
+      url: 'https://easy-mock.com/mock/5c323f1b2188f1589db6af5f/data-list',
       dataPath: 'payload.content' // 渲染组件的分页数据在接口返回的数据中的路径, 嵌套对象使用.表示即可
     }
   }
@@ -186,13 +186,14 @@ export default {
   </data-list>
 </template>
 <script>
-import DataList from 'data-list'
+import DataList from '@femessage/data-list'
 export default {
   name: 'slot-tip',
   components: {DataList},
   data() {
     return {
-      url: 'http://yapi.demo.qunar.com/mock/30643/listars/data-list?result=0',
+      url:
+        'https://easy-mock.com/mock/5c323f1b2188f1589db6af5f/data-list?result=0',
       dataPath: 'payload.content' // 渲染组件的分页数据在接口返回的数据中的路径, 嵌套对象使用.表示即可
     }
   }
@@ -219,13 +220,13 @@ export default {
   </div>
 </template>
 <script>
-import DataList from 'data-list'
+import DataList from '@femessage/data-list'
 export default {
   name: 'reset',
   components: {DataList},
   data() {
     return {
-      url: 'http://yapi.demo.qunar.com/mock/30643/listars/data-list',
+      url: 'https://easy-mock.com/mock/5c323f1b2188f1589db6af5f/data-list',
       dataPath: 'payload.content' // 渲染组件的分页数据在接口返回的数据中的路径, 嵌套对象使用.表示即可
     }
   },
@@ -253,7 +254,7 @@ export default {
   </data-list>
 </template>
 <script>
-import DataList from 'data-list'
+import DataList from '@femessage/data-list'
 
 let query = {
   key: 'value'
@@ -264,7 +265,7 @@ export default {
   components: {DataList},
   data() {
     return {
-      url: 'http://yapi.demo.qunar.com/mock/30643/listars/data-list',
+      url: 'https://easy-mock.com/mock/5c323f1b2188f1589db6af5f/data-list',
       dataPath: 'payload.content', // 渲染组件的分页数据在接口返回的数据中的路径, 嵌套对象使用.表示即可
       query: query
     }

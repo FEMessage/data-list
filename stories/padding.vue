@@ -32,7 +32,7 @@ export default {
   name: 'padding',
   data() {
     return {
-      url: 'http://yapi.demo.qunar.com/mock/30643/listars/data-list',
+      url: 'https://easy-mock.com/mock/5c323f1b2188f1589db6af5f/data-list',
       dataPath: 'payload.content' // 渲染组件的分页数据在接口返回的数据中的路径, 嵌套对象使用.表示即可
     }
   }
