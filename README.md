@@ -61,6 +61,7 @@ yarn add axios
 然后在全局注册`axios`
 
 ```js
+import Vue from 'vue'
 import axios from 'axios'
 Vue.prototype.$axios = axios
 ```
@@ -102,6 +103,8 @@ export default {
 ## Example
 
 ### basic
+
+![data-basic-list](https://ws1.sinaimg.cn/large/85ed9210gy1fyy1o2oi5zg208w0fk15x.jpg)
 
 ```vue
 <template>
@@ -163,6 +166,8 @@ export default {
 
 ### slot content
 
+![data-slot-list](https://ws1.sinaimg.cn/large/85ed9210gy1fyy1cyj7tgg208w0fkqhp.jpg)
+
 ```vue
 <template>
   <data-list ref="dataList" :url="url" :dataPath="dataPath">
@@ -204,6 +209,8 @@ export default {
 **[⬆ Back to Top](#table-of-contents)**
 
 ### reset
+
+![data-reset-list](https://ws1.sinaimg.cn/large/85ed9210gy1fyy1auz6tcg208w0fk1fc.jpg)
 
 ```vue
 <template>
