@@ -251,7 +251,7 @@
                     if (location.href.indexOf(queryFlag) > -1) {
                       newUrl = location.href.replace(queryPattern, searchQuery);
                     } else if (this.routerMode === hashRouterMode) {
-                      search = location.href.indexOf('?') > -1 ? '&' + searchQuery : '?' + searchQuery;
+                      search = location.hash.indexOf('?') > -1 ? '&' + searchQuery : '?' + searchQuery;
 
                       newUrl = location.origin + location.pathname + location.search + location.hash + search;
                     } else {
