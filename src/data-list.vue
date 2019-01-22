@@ -278,7 +278,7 @@ export default {
           newUrl = location.href.replace(queryPattern, searchQuery)
         } else if (this.routerMode === hashRouterMode) {
           let search =
-            location.href.indexOf('?') > -1
+            location.hash.indexOf('?') > -1
               ? `&${searchQuery}`
               : `?${searchQuery}`
           newUrl =
