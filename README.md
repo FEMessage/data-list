@@ -1,10 +1,15 @@
 # data-list
 
-## Introduction
+[![NPM Download](https://img.shields.io/npm/dm/@femessage/data-list.svg)](https://www.npmjs.com/package/@femessage/data-list)
+[![NPM Version](https://img.shields.io/npm/v/@femessage/data-list.svg)](https://www.npmjs.com/package/@femessage/data-list)
+[![NPM License](https://img.shields.io/npm/l/@femessage/data-list.svg)](https://github.com/FEMessage/data-list/blob/master/LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/FEMessage/data-list/pulls)
 
-基于 [v-infinite-loading](https://peachscript.github.io/vue-infinite-loading/) 封装的列表渲染组件
+更好用的滚动加载更多列表组件
 
 ![data-list](https://ws1.sinaimg.cn/large/85ed9210gy1fyuph7ii73g208w0fk4qp.jpg)
+
+## Introduction
 
 **What is `data-list`**
 
