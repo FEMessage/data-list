@@ -22,7 +22,7 @@
     "doc": "vue-styleguidist build",
     "test": "jest",
     "build":
-      "npm run build:unpkg & npm run build:es & npm run build:umd & npm run doc & npm run story:build",
+      "npm run build:unpkg & npm run build:es & npm run build:umd & npm run story:build",
     "build:umd":
       "rollup --config build/rollup.config.js --format umd --file dist/data-list.umd.js",
     "build:es":
