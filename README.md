@@ -27,7 +27,7 @@
 ## Table of Contents
 
 1.  **[Feature](#feature)**
-2.  **[Documentation](#documentation)**
+2.  **[Domo](#demo)**
 3.  **[Quick start](#quick-start)**
 4.  **[Example](#example)**
     * **[basic](#basic)**
@@ -48,9 +48,8 @@
 
 **[⬆ Back to Top](#table-of-contents)**
 
-## Documentation
+## Demo
 
-* [full api doc](https://femessage.github.io/data-list/)
 * [online demo](https://femessage.github.io/data-list/storybook/)
 
 **[⬆ Back to Top](#table-of-contents)**

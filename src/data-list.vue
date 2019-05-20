@@ -234,11 +234,14 @@ export default {
 
       try {
         let resp = await this.$axios.get(url + params)
-        let data = resp.data
 
-        const list = _get(data, this.dataPath, [])
-        if (isDirectionDown) this.list = this.list.concat(list)
-        else this.list.unshift(...list)
+        // 当读取结果为undefined时取默认值[]
+        let data = _get(resp.data, this.dataPath, [])
+
+        // 过滤掉null
+        if (data === null) data = []
+        if (isDirectionDown) this.list = this.list.concat(data)
+        else this.list.unshift(...data)
 
         if (isDirectionDown) this.nextPage++
 
@@ -249,7 +252,7 @@ export default {
          */
         this.$emit('loaded', [...this.list])
 
-        let totalPages = _get(data, this.totalPagesPath, 0)
+        let totalPages = _get(resp.data, this.totalPagesPath, 0)
         if (isDirectionDown && this.nextPage > totalPages) {
           $state.complete()
           // 防止总页数只有第一页的情况
