@@ -1,6 +1,6 @@
 {
   "name": "@femessage/data-list",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "",
   "author": "https://github.com/FEMessage",
   "license": "MIT",
@@ -8,7 +8,11 @@
     "type": "git",
     "url": "https://github.com/FEMessage/data-list.git"
   },
-  "keywords": ["vue", "sfc", "component"],
+  "keywords": [
+    "vue",
+    "sfc",
+    "component"
+  ],
   "main": "dist/data-list.umd.js",
   "module": "dist/data-list.esm.js",
   "unpkg": "dist/data-list.min.js",
@@ -21,14 +25,10 @@
     "story:build": "build-storybook -c .storybook -o docs/storybook",
     "doc": "vue-styleguidist build",
     "test": "jest",
-    "build":
-      "npm run build:unpkg & npm run build:es & npm run build:umd & npm run story:build",
-    "build:umd":
-      "rollup --config build/rollup.config.js --format umd --file dist/data-list.umd.js",
-    "build:es":
-      "rollup --config build/rollup.config.js --format es --file dist/data-list.esm.js",
-    "build:unpkg":
-      "rollup --config build/rollup.config.js --format iife --file dist/data-list.min.js",
+    "build": "npm run build:unpkg & npm run build:es & npm run build:umd & npm run story:build",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/data-list.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/data-list.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/data-list.min.js",
     "precommit": "pretty-quick --staged",
     "stdver": "standard-version -m '[skip ci] chore(release): v%s'",
     "release": "gren release --override"
@@ -64,17 +64,22 @@
     "vue-template-compiler": "^2.5.16",
     "webpack": "^3.10.0"
   },
-  "files": ["src", "dist", "yarn.lock"],
+  "files": [
+    "src",
+    "dist",
+    "yarn.lock"
+  ],
   "jest": {
-    "moduleFileExtensions": ["js", "vue"],
+    "moduleFileExtensions": [
+      "js",
+      "vue"
+    ],
     "transform": {
       "^.+\\.js$": "./node_modules/babel-jest",
       "^.+\\.vue$": "./node_modules/vue-jest"
     }
   },
-
   "vue-sfc-cli": "1.7.0",
-
   "engines": {
     "node": ">= 4.0.0",
     "npm": ">= 3.0.0"
