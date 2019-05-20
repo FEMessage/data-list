@@ -41,6 +41,7 @@
   "devDependencies": {
     "@storybook/vue": "^3.4.10",
     "@vue/test-utils": "^1.0.0-beta.16",
+    "axios": "^0.18.0",
     "babel-jest": "^23.0.1",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
