@@ -1,0 +1,55 @@
+{
+  "projectName": "data-list",
+  "projectOwner": "FEMessage",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "listars",
+      "name": "listars",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/20613509?v=4",
+      "profile": "https://github.com/listars",
+      "contributions": [
+        "code",
+        "bug",
+        "doc",
+        "example"
+      ]
+    },
+    {
+      "login": "levy9527",
+      "name": "levy",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/9384365?v=4",
+      "profile": "http://levy.work",
+      "contributions": [
+        "review",
+        "ideas"
+      ]
+    },
+    {
+      "login": "evillt",
+      "name": "EVILLT",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/19513289?v=4",
+      "profile": "https://evila.me",
+      "contributions": [
+        "infra"
+      ]
+    },
+    {
+      "login": "OuZuYu",
+      "name": "OuZuYu",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/26338853?v=4",
+      "profile": "http://67.216.223.155/resume/",
+      "contributions": [
+        "bug"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
