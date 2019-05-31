@@ -9,6 +9,21 @@
 
 ![data-list](https://ws1.sinaimg.cn/large/85ed9210gy1fyuph7ii73g208w0fk4qp.jpg)
 
+## Table of Contents <!-- omit in toc -->
+
+* [Introduction](#introduction)
+* [Feature](#feature)
+* [Demo](#demo)
+* [Pre Install](#pre-install)
+* [Quick start](#quick-start)
+* [Example](#example)
+  * [basic](#basic)
+  * [slot content](#slot-content)
+  * [reset](#reset)
+* [FAQ](#faq)
+* [License](#license)
+* [Contributors](#contributors)
+
 ## Introduction
 
 **What is `data-list`**
@@ -24,24 +39,6 @@
 * 获取不到数据、没有更多数据、请求错误等场景的提示语（可自定义）
 * 可以保存列表滚动状态，访问详情页后返回，能回到之前的滚动位置
 
-## Table of Contents
-
-1.  **[Feature](#feature)**
-2.  **[Domo](#demo)**
-3.  **[Quick start](#quick-start)**
-4.  **[Example](#example)**
-    * **[basic](#basic)**
-    * **[not save query](#not-save-query)**
-    * **[slot content](#slot-content)**
-    * **[reset](#reset)**
-    * **[custorm query](#custorm-query)**
-5.  **[Api](#api)**
-6.  **[Event](#event)**
-7.  **[Slot](#slot)**
-8.  **[FAQ](#faq)**
-9.  **[LICENSE](#license)**
-10. **[Contributors](#contributors)**
-
 ## Feature
 
 * 只需配置`url`和`数据在接口返回的路径`即可获取到数据
@@ -52,7 +49,7 @@
 
 ## Demo
 
-* [online demo](https://femessage.github.io/data-list/storybook/)
+* [online demo](https://femessage.github.io/data-list)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -60,7 +57,7 @@
 
 先确保你已经正确安装了`axios`
 
-```js
+```sh
 yarn add axios
 ```
 
@@ -76,10 +73,12 @@ Vue.prototype.$axios = axios
 
 ## Quick start
 
-```vue
-// Step1 安装
+```sh
+# Step1 安装
 yarn add @femessage/data-list
+```
 
+```vue
 // Step2 在需要渲染列表的 .vue 文件中
 <template>
   <data-list ref="dataList" :url="url">
@@ -112,216 +111,17 @@ export default {
 
 ![data-basic-list](https://ws1.sinaimg.cn/large/85ed9210gy1fyy1o2oi5zg208w0fk15x.jpg)
 
-```vue
-<template>
-  <data-list ref="dataList" :url="url" :dataPath="dataPath">
-    <!--通过slot-scope从data-list组件获取到返回的数据-->
-    <ul slot-scope="props">
-      <li v-for="(item, index) in props.list" :key="index">
-        {{item.name}}
-      </li>
-    </ul>
-  </data-list>
-</template>
-<script>
-import DataList from '@femessage/data-list'
-export default {
-  name: 'basic',
-  components: {DataList},
-  data() {
-    return {
-      url: 'https://easy-mock.com/mock/5c323f1b2188f1589db6af5f/data-list',
-      dataPath: 'payload.content' // 渲染组件的分页数据在接口返回的数据中的路径, 嵌套对象使用.表示即可
-    }
-  }
-}
-</script>
-```
-
-**[⬆ Back to Top](#table-of-contents)**
-
-### not save query
-
-```vue
-<template>
-  <data-list ref="dataList" :url="url" :dataPath="dataPath" :saveQuery="false">
-    <!--通过slot-scope从data-list组件获取到返回的数据-->
-    <ul slot-scope="props">
-      <li v-for="(item, index) in props.list" :key="index">
-        {{item.name}}
-      </li>
-    </ul>
-  </data-list>
-</template>
-<script>
-import DataList from '@femessage/data-list'
-export default {
-  name: 'no-save-query',
-  components: {DataList},
-  data() {
-    return {
-      url: 'https://easy-mock.com/mock/5c323f1b2188f1589db6af5f/data-list',
-      dataPath: 'payload.content' // 渲染组件的分页数据在接口返回的数据中的路径, 嵌套对象使用.表示即可
-    }
-  }
-}
-</script>
-```
-
 **[⬆ Back to Top](#table-of-contents)**
 
 ### slot content
 
 ![data-slot-list](https://ws1.sinaimg.cn/large/85ed9210gy1fyy1cyj7tgg208w0fkqhp.jpg)
 
-```vue
-<template>
-  <data-list ref="dataList" :url="url" :dataPath="dataPath">
-    <ul slot-scope="props">
-      <li v-for="(item, index) in props.list" :key="index">
-        {{item.name}}
-      </li>
-    </ul>
-    <!--自定义no-more内容-->
-    <div slot="no-more">
-      暂无更多数据
-    </div>
-    <!--自定义no-results内容-->
-    <div slot="no-results">
-      🔍搜索不到数据
-    </div>
-    <!--自定义error内容-->
-    <div slot="error">
-      请求失败，请刷新重试
-    </div>
-  </data-list>
-</template>
-<script>
-import DataList from '@femessage/data-list'
-export default {
-  name: 'slot-tip',
-  components: {DataList},
-  data() {
-    return {
-      url:
-        'https://easy-mock.com/mock/5c323f1b2188f1589db6af5f/data-list?result=0',
-      dataPath: 'payload.content' // 渲染组件的分页数据在接口返回的数据中的路径, 嵌套对象使用.表示即可
-    }
-  }
-}
-</script>
-```
-
 **[⬆ Back to Top](#table-of-contents)**
 
 ### reset
 
 ![data-reset-list](https://ws1.sinaimg.cn/large/85ed9210gy1fyy1auz6tcg208w0fk1fc.jpg)
-
-```vue
-<template>
-  <div class="reset">
-    <button @click="reset">重置</button>
-    <data-list ref="dataList" :url="url" :dataPath="dataPath">
-      <!--通过slot-scope从data-list组件获取到返回的数据-->
-      <ul slot-scope="props">
-        <li v-for="(item, index) in props.list" :key="index">
-          {{item.name}}
-        </li>
-      </ul>
-    </data-list>
-  </div>
-</template>
-<script>
-import DataList from '@femessage/data-list'
-export default {
-  name: 'reset',
-  components: {DataList},
-  data() {
-    return {
-      url: 'https://easy-mock.com/mock/5c323f1b2188f1589db6af5f/data-list',
-      dataPath: 'payload.content' // 渲染组件的分页数据在接口返回的数据中的路径, 嵌套对象使用.表示即可
-    }
-  },
-  methods: {
-    reset() {
-      this.$refs.dataList.reset()
-    }
-  }
-}
-</script>
-```
-
-**[⬆ Back to Top](#table-of-contents)**
-
-### custorm query
-
-```vue
-<template>
-  <data-list ref="dataList" :url="url" :dataPath="dataPath" :query="query">
-    <ul slot-scope="props">
-      <li v-for="(item, index) in props.list" :key="index">
-        {{item.name}}
-      </li>
-    </ul>
-  </data-list>
-</template>
-<script>
-import DataList from '@femessage/data-list'
-
-let query = {
-  key: 'value'
-}
-
-export default {
-  name: 'query',
-  components: {DataList},
-  data() {
-    return {
-      url: 'https://easy-mock.com/mock/5c323f1b2188f1589db6af5f/data-list',
-      dataPath: 'payload.content', // 渲染组件的分页数据在接口返回的数据中的路径, 嵌套对象使用.表示即可
-      query: query
-    }
-  }
-}
-</script>
-```
-
-**[⬆ Back to Top](#table-of-contents)**
-
-## Api
-
-| prop             | 类型    | 备注                                                                                     | default            |
-| ---------------- | ------- | ---------------------------------------------------------------------------------------- | ------------------ |
-| url              | String  | 请求数据的地址                                                                           | -                  |
-| dataPath         | String  | 渲染组件的分页数据在接口返回的数据中的路径, 嵌套对象使用.表示即可，如 `payload.content`  | payload.content    |
-| totalPagesPath   | String  | 渲染组件的总页数在接口返回的数据中的路径, 嵌套对象使用.表示即可，如 `payload.totalPages` | payload.totalPages |
-| query            | Object  | 外部的注入额外的查询参数, 键值对形式                                                     | -                  |
-| size             | Number  | 每页显示的个数                                                                           | 10                 |
-| hasPagination    | Boolean | 是否分页                                                                                 | True               |
-| noPaginationSize | Number  | 不分页时的 size 的大小                                                                   | 999                |
-| saveQuery        | Boolean | 是否开启存储请求参数                                                                     | True               |
-| routerMode       | String  | 路由模式, hash \| history \|\| '', 决定了查询参数存放的形式, 设置为空则不存储查询参数    | hash               |
-
-**[⬆ Back to Top](#table-of-contents)**
-
-## Event
-
-| event   | 备注               | 返回参数 |
-| ------- | ------------------ | -------- |
-| loading | 请求 loading 事件  | -        |
-| loaded  | 请求完 loaded 事件 | 列表数据 |
-| error   | 请求数据失败事件   | error    |
-
-**[⬆ Back to Top](#table-of-contents)**
-
-## Slot
-
-| Slot       | 备注                                         |
-| ---------- | -------------------------------------------- |
-| no-more    | 该信息将会在所有数据都已经加载完时呈现给用户 |
-| no-results | 该信息将会在没有加载到任何数据时呈现给用户   |
-| error      | 该信息将会在加载出现错误时呈现给用户         |
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -335,22 +135,22 @@ A. 加载多次和无法加载都是复杂的页面布局导致组件监听的�
 
 * example：
 
-  ```vue
-  <div class="infinite-wrapper">
-    <!--默认会寻找最近的具备 overflow-y: auto | scroll CSS 样式的父元素，作为监听滚动事件的目标元素-->
-    <!--如果该值为 true，则会向上查找最近的具备 infinite-wrapper 属性的父元素作为滚动容器-->
-    <!--如果该值为一个字符串，则会将该值当作 CSS 选择器并使用 querySelector 查找该元素，将其作为滚动容器-->
-    <data-list ref="dataList" :url="url" forceUseInfiniteWrapper=".infinite-wrapper"></data-list>
-  </div>
-  ```
+```vue
+<div class="infinite-wrapper">
+  <!--默认会寻找最近的具备 overflow-y: auto | scroll CSS 样式的父元素，作为监听滚动事件的目标元素-->
+  <!--如果该值为 true，则会向上查找最近的具备 infinite-wrapper 属性的父元素作为滚动容器-->
+  <!--如果该值为一个字符串，则会将该值当作 CSS 选择器并使用 querySelector 查找该元素，将其作为滚动容器-->
+  <data-list ref="dataList" :url="url" force-use-infinite-wrapper=".infinite-wrapper"></data-list>
+</div>
+```
 
-- 指定监听的滚动元素（避免错乱布局造成的多次请求或者不发送请求）
+* 指定监听的滚动元素（避免错乱布局造成的多次请求或者不发送请求）
 
-  ```vue
-  <div style="overflow-y: auto">
-      <data-list ref="dataList" :url="url" forceUseInfiniteWrapper></data-list>
-  </div>
-  ```
+```vue
+<div style="overflow-y: auto">
+  <data-list ref="dataList" :url="url" force-use-infinite-wrapper></data-list>
+</div>
+```
 
 **[⬆ Back to Top](#table-of-contents)**
 
