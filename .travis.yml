@@ -16,7 +16,7 @@ after_success:
 cache: yarn
 deploy:
 - provider: pages
-  local-dir: docs/storybook
+  local-dir: docs
   github-token: $GITHUB_TOKEN
   skip-cleanup: true
   keep-history: true

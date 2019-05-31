@@ -1,55 +1,47 @@
 <template>
   <div class="data-list">
     <!--向上滑动区域-->
-    <infinite-loading v-if="canPrev"
-                      ref="infiniteLoading"
-                      @infinite="getList($event, directionUp)"
-                      v-bind="$attrs"
-                      :distance="distance"
-                      :identifier="identifier"
-                      direction="top">
+    <infinite-loading
+      v-if="canPrev"
+      ref="infiniteLoading"
+      @infinite="getList($event, directionUp)"
+      v-bind="$attrs"
+      :distance="distance"
+      :identifier="identifier"
+      direction="top"
+    >
       <!--@slot 该信息将会在所有数据都已经加载完时呈现给用户-->
       <div slot="no-more" class="loaded-tip">
-        <slot name="no-more">
-          已经到达顶部了
-        </slot>
+        <slot name="no-more">已经到达顶部了</slot>
       </div>
       <!--@slot 该信息将会在没有加载到任何数据时呈现给用户-->
       <div slot="no-results" class="loaded-tip">
-        <slot name="no-results">
-          暂时没有数据
-        </slot>
+        <slot name="no-results">暂时没有数据</slot>
       </div>
       <!--@slot 该信息将会在加载出现错误时呈现给用户-->
       <div slot="error">
-        <slot name="error">
-          网络异常，请刷新重试
-        </slot>
+        <slot name="error">网络异常，请刷新重试</slot>
       </div>
     </infinite-loading>
 
+    <!--@slot 自定义列表内容-->
     <slot :list="list">
-      <!--@slot 自定义列表内容-->
       自定义列表内容
     </slot>
 
-    <infinite-loading ref="infiniteLoading"
-                      @infinite="getList($event, directionDown)"
-                      v-bind="$attrs"
-                      :identifier="identifier"
-                      direction="bottom">
+    <infinite-loading
+      ref="infiniteLoading"
+      @infinite="getList($event, directionDown)"
+      v-bind="$attrs"
+      :identifier="identifier"
+      direction="bottom"
+    >
       <!--@slot 该信息将会在所有数据都已经加载完时呈现给用户-->
-      <slot name="no-more" slot="no-more">
-        没有更多了
-      </slot>
+      <slot name="no-more" slot="no-more">没有更多了</slot>
       <!--@slot 该信息将会在没有加载到任何数据时呈现给用户-->
-      <slot name="no-results" slot="no-results">
-        暂时没有数据
-      </slot>
+      <slot name="no-results" slot="no-results">暂时没有数据</slot>
       <!--@slot 该信息将会在加载出现错误时呈现给用户-->
-      <slot name="error" slot="error">
-        网络异常，请刷新重试
-      </slot>
+      <slot name="error" slot="error">网络异常，请刷新重试</slot>
     </infinite-loading>
   </div>
 </template>
@@ -59,15 +51,12 @@ import InfiniteLoading from 'vue-infinite-loading'
 import qs from 'qs'
 import _get from 'lodash.get'
 
-const dataPath = 'payload.content'
-const totalPagesPath = 'payload.totalPages'
-
 const defaultFirstPage = 1
 
 const directionUp = 'top'
 const directionDown = 'bottom'
 const updateDistanceFn = 'scroll'
-const hashRouterMode = 'hash'
+const hash = 'hash'
 
 const equal = '='
 const equalPattern = /=/g
@@ -85,9 +74,10 @@ export default {
   components: {
     InfiniteLoading
   },
+  inheritAttrs: false,
   props: {
     /**
-     * 请求的url地址
+     * 请求数据的地址
      */
     url: String,
     /**
@@ -95,21 +85,21 @@ export default {
      */
     query: {
       type: Object,
-      default: () => {}
+      default: () => ({})
     },
     /**
      * 渲染组件的分页数据在接口返回的数据中的路径, 嵌套对象使用.表示即可
      */
     dataPath: {
       type: String,
-      default: dataPath
+      default: 'payload.content'
     },
     /**
      * 渲染组件的总页数在接口返回的数据中的路径, 嵌套对象使用.表示即可
      */
     totalPagesPath: {
       type: String,
-      default: totalPagesPath
+      default: 'payload.totalPages'
     },
     /**
      * 每页显示的个数
@@ -140,11 +130,11 @@ export default {
       default: true
     },
     /**
-     * 路由模式, hash | history || '', 决定了查询参数存放的形式, 设置为空则不存储查询参数
+     * 路由模式, 'hash' | 'history' || '', 决定了查询参数存放的形式, 设置为''则不存储查询参数
      */
     routerMode: {
       type: String,
-      default: hashRouterMode
+      default: hash
     }
   },
   data() {
@@ -228,7 +218,6 @@ export default {
 
       /**
        * 请求loading事件
-       * @event loading
        */
       this.$emit('loading')
 
@@ -248,7 +237,7 @@ export default {
         if (!!this.list.length) $state.loaded()
         /**
          * 请求完loaded事件
-         * @event loaded
+         * @property {array} list - 列表数据
          */
         this.$emit('loaded', [...this.list])
 
@@ -261,8 +250,8 @@ export default {
       } catch (err) {
         $state.error()
         /**
-         * 请求数据失败，返回err对象
-         * @event error
+         * 请求数据失败
+         * @property {error} err
          */
         this.$emit('error', err)
       }
@@ -279,7 +268,7 @@ export default {
 
         if (location.href.indexOf(queryFlag) > -1) {
           newUrl = location.href.replace(queryPattern, searchQuery)
-        } else if (this.routerMode === hashRouterMode) {
+        } else if (this.routerMode === hash) {
           let search =
             location.hash.indexOf('?') > -1
               ? `&${searchQuery}`
