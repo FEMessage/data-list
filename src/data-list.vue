@@ -222,26 +222,27 @@ export default {
       this.$emit('loading')
 
       try {
-        let resp = await this.$axios.get(url + params)
+        const {data: resp} = await this.$axios.get(url + params)
 
         // 当读取结果为undefined时取默认值[]
-        let data = _get(resp.data, this.dataPath, [])
+        const data = _get(resp, this.dataPath, []) || []
 
-        // 过滤掉null
-        if (data === null) data = []
-        if (isDirectionDown) this.list = this.list.concat(data)
-        else this.list.unshift(...data)
-
-        if (isDirectionDown) this.nextPage++
+        if (isDirectionDown) {
+          this.list.push(...data)
+          this.nextPage++
+        } else {
+          this.list.unshift(...data)
+        }
 
         if (!!this.list.length) $state.loaded()
         /**
          * 请求完loaded事件
          * @property {array} list - 列表数据
+         * @property {object} resp - 接口返回的数据
          */
-        this.$emit('loaded', [...this.list])
+        this.$emit('loaded', [...this.list], resp)
 
-        let totalPages = _get(resp.data, this.totalPagesPath, 0)
+        const totalPages = _get(resp, this.totalPagesPath, 0)
         if (isDirectionDown && this.nextPage > totalPages) {
           $state.complete()
           // 防止总页数只有第一页的情况
