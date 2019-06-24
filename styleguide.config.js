@@ -2,7 +2,7 @@ const {VueLoaderPlugin} = require('vue-loader')
 const path = require('path')
 const glob = require('glob')
 
-const demos = ['docs/basic.md', ...glob.sync('docs/!(basic).md')]
+const demos = ['docs/basic.md', ...glob.sync('docs/!(basic|faq).md')]
 const demoSections = demos.map(filePath => ({
   name: path.basename(filePath, '.md'),
   content: filePath
@@ -24,6 +24,10 @@ module.exports = {
     {
       name: 'Demo',
       sections: demoSections
+    },
+    {
+      name: 'FAQ',
+      content: 'docs/faq.md'
     }
   ],
   webpackConfig: {
