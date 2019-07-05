@@ -9,40 +9,39 @@
 
 ![data-list](https://ws1.sinaimg.cn/large/85ed9210gy1fyuph7ii73g208w0fk4qp.jpg)
 
+[English](./README-en.md)
+
 ## Table of Contents <!-- omit in toc -->
 
-* [Introduction](#Introduction)
-* [Feature](#Feature)
-* [Demo](#Demo)
-* [Pre Install](#Pre-Install)
-* [Quick start](#Quick-start)
-* [Example](#Example)
-  * [basic](#basic)
-  * [slot content](#slot-content)
-  * [reset](#reset)
-* [License](#License)
-* [Contributors](#Contributors)
+* [Introduction](#introduction)
+* [Feature](#feature)
+* [Demo](#demo)
+* [Pre Install](#pre-install)
+* [Quick start](#quick-start)
+* [Example](#example)
+  * [Basic](#basic)
+  * [Slot Content](#slot-content)
+  * [Reset](#reset)
+* [License](#license)
+* [Contributors](#contributors)
 
 ## Introduction
 
 **What is `data-list`**
 
-`data-list`组件 是基于 [v-infinite-loading](https://peachscript.github.io/vue-infinite-loading/) 封装的列表渲染组件。上手`data-list`组件相对简单，只需要配置 url 和数据返回路径即可进行数据处理，即可提供无限滚动，滑动加载更多数据等。
+`data-list`组件 是基于 [v-infinite-loading](https://peachscript.github.io/vue-infinite-loading/) 封装的列表渲染组件。只需要配置 url 和 datahPath 即可进行数据处理，提供无限滚动，滑动加载更多数据等功能。
 
 **Why**
 
-日常需要面对大量列表渲染的场景，通常这些列表的数据处理逻辑是可复用的。而`data-list`只需要进行简单的配置即可实现：
-
-* 传入`url`即会进行数据的获取并且返回
-* 自动判断当前第几页，是否已到尾页、并且停止数据的加载
-* 获取不到数据、没有更多数据、请求错误等场景的提示语（可自定义）
-* 可以保存列表滚动状态，访问详情页后返回，能回到之前的滚动位置
+日常需要面对大量列表渲染的场景，通常这些列表的数据处理逻辑是相似或重复的。为避免写重复代码，data-list因此诞生了。
 
 ## Feature
 
-* 只需配置`url`和`数据在接口返回的路径`即可获取到数据
+* 传入`url`即会请求获取数据
 * 自带下拉加载更多，分页数据处理
-* 支持存储请求参数，可以向上翻页获取上一页数据，向下获取下一页数据
+* 自动判断当前第几页，是否已到尾页、并且停止数据的加载
+* 支持获取不到数据、没有更多数据、请求错误等场景的提示语（可自定义）
+* 可以保存列表滚动状态，访问详情页后返回或页面刷新，能恢复之前的滚动位置
 
 **[⬆ Back to Top](#table-of-contents)**
 
