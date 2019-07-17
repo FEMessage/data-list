@@ -50,6 +50,7 @@
 import InfiniteLoading from 'vue-infinite-loading'
 import qs from 'qs'
 import _get from 'lodash.get'
+import _debounce from 'lodash.debounce'
 
 const defaultFirstPage = 1
 
@@ -151,6 +152,15 @@ export default {
       scrollParent: null
     }
   },
+  computed: {
+    getList() {
+      /**
+       * 有时同一infinite事件会触发两次，所以对getList做debounce处理
+       * @see: https://github.com/PeachScript/vue-infinite-loading/issues/228
+       */
+      return _debounce(this._getList, 200)
+    }
+  },
   watch: {
     url: function() {
       this.reset()
@@ -181,7 +191,7 @@ export default {
     )
   },
   methods: {
-    async getList($state, direction) {
+    async _getList($state, direction) {
       const isDirectionDown = direction === this.directionDown
       let url = this.url
       let params = ''
