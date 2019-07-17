@@ -48,8 +48,8 @@
 
 <script>
 import InfiniteLoading from 'vue-infinite-loading'
-import qs from 'qs'
 import _get from 'lodash.get'
+import * as queryUtil from './utils/query'
 import _debounce from 'lodash.debounce'
 
 const defaultFirstPage = 1
@@ -57,18 +57,6 @@ const defaultFirstPage = 1
 const directionUp = 'top'
 const directionDown = 'bottom'
 const updateDistanceFn = 'scroll'
-const hash = 'hash'
-
-const equal = '='
-const equalPattern = /=/g
-
-const valueSeparator = '~'
-const paramSeparator = ','
-
-const valueSeparatorPattern = new RegExp(valueSeparator, 'g')
-
-const queryFlag = 'q='
-const queryPattern = new RegExp('q=.*' + paramSeparator)
 
 export default {
   name: 'data-list',
@@ -129,13 +117,6 @@ export default {
     saveQuery: {
       type: Boolean,
       default: true
-    },
-    /**
-     * 路由模式, 'hash' | 'history' || '', 决定了查询参数存放的形式, 设置为''则不存储查询参数
-     */
-    routerMode: {
-      type: String,
-      default: hash
     }
   },
   data() {
@@ -153,6 +134,9 @@ export default {
     }
   },
   computed: {
+    routerMode() {
+      return this.$router ? this.$router.mode : 'hash'
+    },
     getList() {
       /**
        * 有时同一infinite事件会触发两次，所以对getList做debounce处理
@@ -162,19 +146,19 @@ export default {
     }
   },
   watch: {
-    url: function() {
+    url() {
       this.reset()
     }
   },
   mounted() {
     // 获取存储的query值
-    let matches = location.href.match(queryPattern)
-
-    if (matches) {
-      let query = matches[0].substr(2).replace(valueSeparatorPattern, equal)
-      this.storeQuery = qs.parse(query, {delimiter: paramSeparator})
-      this.nextPage = this.storeQuery.page
-      this.prevPage = this.storeQuery.page
+    if (this.saveQuery) {
+      const query = queryUtil.get(location.href)
+      if (query) {
+        this.storeQuery = query
+        this.nextPage = query.page
+        this.prevPage = query.page
+      }
     }
 
     // scroll触发向上滚动的配置，防止同时出现两个spinner
@@ -193,38 +177,34 @@ export default {
   methods: {
     async _getList($state, direction) {
       const isDirectionDown = direction === this.directionDown
-      let url = this.url
-      let params = ''
+      const {url} = this
+      const atTop = !isDirectionDown && this.prevPage == defaultFirstPage
 
-      if (!url || (!isDirectionDown && this.prevPage == defaultFirstPage)) {
+      if (!url || atTop) {
         $state.complete()
         console.warn('url 为空, 不发送请求')
         return
       }
 
-      if (url.indexOf('?') > -1) url += '&'
-      else url += '?'
-
       if (!isDirectionDown) this.prevPage--
-      let size = this.hasPagination ? this.size : this.noPaginationSize
-      const query = Object.assign(
-        {},
-        this.storeQuery,
-        {page: isDirectionDown ? this.nextPage : this.prevPage, size},
-        this.query
-      )
+      let query = {
+        ...this.storeQuery,
+        page: isDirectionDown ? this.nextPage : this.prevPage,
+        size: this.hasPagination ? this.size : this.noPaginationSize,
+        ...this.query
+      }
 
-      params += Object.keys(query)
-        .filter(k => {
-          return query[k] !== '' && query[k] !== null && query[k] !== undefined
-        })
-        .reduce(
-          (params, k, i) =>
-            (params += `${i === 0 ? '' : '&'}${k}=${encodeURIComponent(
-              query[k].toString().trim()
-            )}`),
-          ''
-        )
+      // 无效值过滤，注意0是有效值
+      query = Object.keys(query)
+        .filter(k => ['', undefined, null].indexOf(query[k]) === -1)
+        .reduce((obj, k) => {
+          obj[k] = query[k].toString().trim()
+          return obj
+        }, {})
+
+      const queryStr =
+        (url.indexOf('?') > -1 ? '&' : '?') +
+        queryUtil.stringify(query, '=', '&')
 
       /**
        * 请求loading事件
@@ -232,7 +212,7 @@ export default {
       this.$emit('loading')
 
       try {
-        const {data: resp} = await this.$axios.get(url + params)
+        const {data: resp} = await this.$axios.get(url + queryStr)
 
         // 当读取结果为undefined时取默认值[]
         const data = _get(resp, this.dataPath, []) || []
@@ -268,37 +248,8 @@ export default {
       }
 
       // 存储请求参数
-      if (this.saveQuery && this.routerMode) {
-        let newUrl = ''
-        let searchQuery =
-          queryFlag +
-          params
-            .replace(/&/g, paramSeparator)
-            .replace(equalPattern, valueSeparator) +
-          paramSeparator
-
-        if (location.href.indexOf(queryFlag) > -1) {
-          newUrl = location.href.replace(queryPattern, searchQuery)
-        } else if (this.routerMode === hash) {
-          let search =
-            location.hash.indexOf('?') > -1
-              ? `&${searchQuery}`
-              : `?${searchQuery}`
-          newUrl =
-            location.origin +
-            location.pathname +
-            location.search +
-            location.hash +
-            search
-        } else {
-          let search = location.search ? `&${searchQuery}` : `?${searchQuery}`
-          newUrl =
-            location.origin +
-            location.pathname +
-            location.search +
-            search +
-            location.hash
-        }
+      if (this.saveQuery) {
+        const newUrl = queryUtil.set(location.href, query, this.routerMode)
         history.replaceState(history.state, 'data-list loaded', newUrl)
       }
     },
@@ -316,11 +267,10 @@ export default {
       this.list = []
       this.nextPage = defaultFirstPage
       this.prevPage = defaultFirstPage
-      history.replaceState(
-        history.state,
-        '',
-        location.href.replace(queryPattern, '')
-      )
+      if (this.saveQuery) {
+        const newUrl = queryUtil.clear(location.href)
+        history.replaceState(history.state, '', newUrl)
+      }
       this.identifier += 1
     }
   }
