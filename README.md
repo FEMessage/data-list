@@ -7,7 +7,7 @@
 
 更好用的滚动加载更多列表组件
 
-![data-list](https://ws1.sinaimg.cn/large/85ed9210gy1fyuph7ii73g208w0fk4qp.jpg)
+![](https://cdn.nlark.com/yuque/0/2019/gif/224563/1561712793658-9351ad70-4b43-4115-bc31-bf507781759c.gif#align=left&display=inline&height=560&originHeight=560&originWidth=320&size=0&status=done&width=320)
 
 [English](./README-en.md)
 
@@ -17,7 +17,7 @@
 * [Feature](#feature)
 * [Demo](#demo)
 * [Pre Install](#pre-install)
-* [Quick start](#quick-start)
+* [Quick Start](#quick-start)
 * [Example](#example)
   * [Basic](#basic)
   * [Slot Content](#slot-content)
@@ -33,7 +33,7 @@
 
 **Why**
 
-日常需要面对大量列表渲染的场景，通常这些列表的数据处理逻辑是相似或重复的。为避免写重复代码，data-list因此诞生了。
+日常需要面对大量列表渲染的场景，通常这些列表的数据处理逻辑是相似或重复的。为避免写重复代码，data-list 因此诞生了。
 
 ## Feature
 
@@ -107,19 +107,19 @@ export default {
 
 ### basic
 
-![data-basic-list](https://ws1.sinaimg.cn/large/85ed9210gy1fyy1o2oi5zg208w0fk15x.jpg)
+![](https://cdn.nlark.com/yuque/0/2019/gif/224563/1561712793428-d597adc3-e741-443e-9c52-65fa5ae46b89.gif#align=left&display=inline&height=560&originHeight=560&originWidth=320&size=0&status=done&width=320)
 
 **[⬆ Back to Top](#table-of-contents)**
 
 ### slot content
 
-![data-slot-list](https://ws1.sinaimg.cn/large/85ed9210gy1fyy1cyj7tgg208w0fkqhp.jpg)
+![](https://cdn.nlark.com/yuque/0/2019/gif/224563/1561712793541-047e59ab-6487-4000-96f3-505e236e2323.gif#align=left&display=inline&height=560&originHeight=560&originWidth=320&size=0&status=done&width=320)
 
 **[⬆ Back to Top](#table-of-contents)**
 
 ### reset
 
-![data-reset-list](https://ws1.sinaimg.cn/large/85ed9210gy1fyy1auz6tcg208w0fk1fc.jpg)
+![](https://cdn.nlark.com/yuque/0/2019/gif/224563/1561712793411-86387fdf-7ca9-4430-a052-19f56913787f.gif#align=left&display=inline&height=560&originHeight=560&originWidth=320&size=0&status=done&width=320)
 
 **[⬆ Back to Top](#table-of-contents)**
 
