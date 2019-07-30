@@ -1,9 +1,11 @@
 # data-list
 
-[![NPM Download](https://img.shields.io/npm/dm/@femessage/data-list.svg)](https://www.npmjs.com/package/@femessage/data-list)
-[![NPM Version](https://img.shields.io/npm/v/@femessage/data-list.svg)](https://www.npmjs.com/package/@femessage/data-list)
-[![NPM License](https://img.shields.io/npm/l/@femessage/data-list.svg)](https://github.com/FEMessage/data-list/blob/master/LICENSE)
+[![Build Status](https://badgen.net/travis/FEMessage/data-list/master)](https://travis-ci.com/FEMessage/data-list)
+[![NPM Download](https://badgen.net/npm/dm/@femessage/data-list)](https://www.npmjs.com/package/@femessage/data-list)
+[![NPM Version](https://badgen.net/npm/v/@femessage/data-list)](https://www.npmjs.com/package/@femessage/data-list)
+[![NPM License](https://badgen.net/npm/license/@femessage/data-list)](https://github.com/FEMessage/data-list/blob/master/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/FEMessage/data-list/pulls)
+[![Automated Release Notes by gren](https://img.shields.io/badge/%F0%9F%A4%96-release%20notes-00B2EE.svg)](https://github-tools.github.io/github-release-notes/)
 
 更好用的滚动加载更多列表组件
 
@@ -11,27 +13,30 @@
 
 [English](./README-en.md)
 
-## Table of Contents <!-- omit in toc -->
+## Table of Contents
 
 * [Introduction](#introduction)
+  * [What is `data-list`](#what-is-data-list)
+  * [Why](#why)
 * [Feature](#feature)
-* [Demo](#demo)
+* [Links](#links)
 * [Pre Install](#pre-install)
 * [Quick Start](#quick-start)
 * [Example](#example)
   * [Basic](#basic)
   * [Slot Content](#slot-content)
   * [Reset](#reset)
-* [License](#license)
+* [Contributing](#contributing)
 * [Contributors](#contributors)
+* [License](#license)
 
 ## Introduction
 
-**What is `data-list`**
+### What is `data-list`
 
 `data-list`组件 是基于 [v-infinite-loading](https://peachscript.github.io/vue-infinite-loading/) 封装的列表渲染组件。只需要配置 url 和 datahPath 即可进行数据处理，提供无限滚动，滑动加载更多数据等功能。
 
-**Why**
+### Why
 
 日常需要面对大量列表渲染的场景，通常这些列表的数据处理逻辑是相似或重复的。为避免写重复代码，data-list 因此诞生了。
 
@@ -43,13 +48,13 @@
 * 支持获取不到数据、没有更多数据、请求错误等场景的提示语（可自定义）
 * 可以保存列表滚动状态，访问详情页后返回或页面刷新，能恢复之前的滚动位置
 
-**[⬆ Back to Top](#table-of-contents)**
+[⬆ Back to Top](#table-of-contents)
 
-## Demo
+## Links
 
-* [online demo](https://femessage.github.io/data-list)
+* [docs](https://FEMessage.github.io/data-list/)
 
-**[⬆ Back to Top](#table-of-contents)**
+[⬆ Back to Top](#table-of-contents)
 
 ## Pre Install
 
@@ -67,7 +72,7 @@ import axios from 'axios'
 Vue.prototype.$axios = axios
 ```
 
-**[⬆ Back to Top](#table-of-contents)**
+[⬆ Back to Top](#table-of-contents)
 
 ## Quick start
 
@@ -101,33 +106,36 @@ export default {
 </script>
 ```
 
-**[⬆ Back to Top](#table-of-contents)**
+[⬆ Back to Top](#table-of-contents)
 
 ## Example
 
-### basic
+### Basic
 
 ![](https://cdn.nlark.com/yuque/0/2019/gif/224563/1561712793428-d597adc3-e741-443e-9c52-65fa5ae46b89.gif#align=left&display=inline&height=560&originHeight=560&originWidth=320&size=0&status=done&width=320)
 
-**[⬆ Back to Top](#table-of-contents)**
-
-### slot content
+### Slot Content
 
 ![](https://cdn.nlark.com/yuque/0/2019/gif/224563/1561712793541-047e59ab-6487-4000-96f3-505e236e2323.gif#align=left&display=inline&height=560&originHeight=560&originWidth=320&size=0&status=done&width=320)
 
-**[⬆ Back to Top](#table-of-contents)**
-
-### reset
+### Reset
 
 ![](https://cdn.nlark.com/yuque/0/2019/gif/224563/1561712793411-86387fdf-7ca9-4430-a052-19f56913787f.gif#align=left&display=inline&height=560&originHeight=560&originWidth=320&size=0&status=done&width=320)
 
-**[⬆ Back to Top](#table-of-contents)**
+[⬆ Back to Top](#table-of-contents)
 
-## License
+## Contributing
 
-[MIT](./LICENSE)
+For those who are interested in contributing to this project, such as:
 
-**[⬆ Back to Top](#table-of-contents)**
+* report a bug
+* request new feature
+* fix a bug
+* implement a new feature
+
+Please refer to our [contributing guide](https://github.com/FEMessage/.github/blob/master/CONTRIBUTING.md).
+
+[⬆ Back to Top](#table-of-contents)
 
 ## Contributors
 
@@ -141,3 +149,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+## License
+
+[MIT](./LICENSE)
+
+[⬆ Back to Top](#table-of-contents)

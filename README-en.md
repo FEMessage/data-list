@@ -1,34 +1,40 @@
 # data-list
 
-[![](https://img.shields.io/npm/dm/@femessage/data-list.svg#align=left&display=inline&height=20&originHeight=20&originWidth=140&status=done&width=140)](https://www.npmjs.com/package/@femessage/data-list)
-[![](https://img.shields.io/npm/v/@femessage/data-list.svg#align=left&display=inline&height=20&originHeight=20&originWidth=80&status=done&width=80)](https://www.npmjs.com/package/@femessage/data-list)
-![](https://img.shields.io/npm/l/@femessage/data-list.svg#align=left&display=inline&height=20&originHeight=20&originWidth=78&status=done&width=78)
-[![](https://img.shields.io/badge/PRs-welcome-brightgreen.svg#align=left&display=inline&height=20&originHeight=20&originWidth=90&status=done&width=90)](https://github.com/FEMessage/data-list/pulls)
+[![Build Status](https://badgen.net/travis/FEMessage/data-list/master)](https://travis-ci.com/FEMessage/data-list)
+[![NPM Download](https://badgen.net/npm/dm/@femessage/data-list)](https://www.npmjs.com/package/@femessage/data-list)
+[![NPM Version](https://badgen.net/npm/v/@femessage/data-list)](https://www.npmjs.com/package/@femessage/data-list)
+[![NPM License](https://badgen.net/npm/license/@femessage/data-list)](https://github.com/FEMessage/data-list/blob/master/LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/FEMessage/data-list/pulls)
+[![Automated Release Notes by gren](https://img.shields.io/badge/%F0%9F%A4%96-release%20notes-00B2EE.svg)](https://github-tools.github.io/github-release-notes/)
 
 scroll to bottom and load more component
 
 ![](https://cdn.nlark.com/yuque/0/2019/gif/224563/1561712793658-9351ad70-4b43-4115-bc31-bf507781759c.gif#align=left&display=inline&height=560&originHeight=560&originWidth=320&size=0&status=done&width=320)
 
 ## Table of Contents
+
 * [Introduction](#introduction)
+  * [What is `data-list`](#what-isdata-list)
+  * [Why](#why)
 * [Feature](#feature)
-* [Demo](#demo)
+* [Links](#links)
 * [Pre Install](#pre-install)
 * [Quick start](#quick-start)
 * [Example](#example)
   * [Basic](#basic)
   * [Slot Content](#slot-content)
   * [Reset](#reset)
-* [License](#license)
+* [Contributing](#contributing)
 * [Contributors](#contributors)
+* [License](#license)
 
 ## Introduction
 
-**What is `data-list`**
+### What is `data-list`
 
 `data-list` is a list rendering component, based on [v-infinite-loading](https://peachscript.github.io/vue-infinite-loading/). `data-list` is easy to use. Seting the url and dataPpath props, unlimited scrolling and loading more is ready to go
 
-**Why**
+### Why
 
 In daily developement, there are lots of list rendering scenes, usually the data processing logic of these lists is similar or repeated. To avoid getting duplicate code, `data-list` is born.
 
@@ -41,13 +47,13 @@ In daily developement, there are lots of list rendering scenes, usually the data
 * Support for scenes such as no data, no more data, request errors, etc. (customizable)
 * Support saving scrolling status, can return to the previous scrolling position after router go back or page reload
 
-**[⬆Back to Top](#table-of-contents)**
+[⬆Back to Top](#table-of-contents)
 
-## Demo
+## Links
 
-* [Online demo](https://femessage.github.io/data-list)
+* [docs](https://FEMessage.github.io/data-list/)
 
-**[⬆Back to Top](#table-of-contents)**
+[⬆ Back to Top](#table-of-contents)
 
 ## Pre Install
 
@@ -65,7 +71,7 @@ import axios from 'axios'
 Vue.prototype.$axios = axios
 ```
 
-**[⬆Back to Top](#table-of-contents)**
+[⬆Back to Top](#table-of-contents)
 
 ## Quick start
 
@@ -99,30 +105,52 @@ export default {
 </script>
 ```
 
-**[⬆Back to Top](#table-of-contents)**
+[⬆Back to Top](#table-of-contents)
 
 ## Example
 
 ### Basic
 
-![](https://cdn.nlark.com/yuque/0/2019/gif/224563/1561712793428-d597adc3-e741-443e-9c52-65fa5ae46b89.gif#align=left&display=inline&height=560&originHeight=560&originWidth=320&size=0&status=done&width=320)<br />**[⬆Back to Top](#table-of-contents)**
+![](https://cdn.nlark.com/yuque/0/2019/gif/224563/1561712793428-d597adc3-e741-443e-9c52-65fa5ae46b89.gif#align=left&display=inline&height=560&originHeight=560&originWidth=320&size=0&status=done&width=320)
 
-### Slot content
+### Slot Content
 
-![](https://cdn.nlark.com/yuque/0/2019/gif/224563/1561712793541-047e59ab-6487-4000-96f3-505e236e2323.gif#align=left&display=inline&height=560&originHeight=560&originWidth=320&size=0&status=done&width=320)<br />**[⬆Back to Top](#table-of-contents)**
+![](https://cdn.nlark.com/yuque/0/2019/gif/224563/1561712793541-047e59ab-6487-4000-96f3-505e236e2323.gif#align=left&display=inline&height=560&originHeight=560&originWidth=320&size=0&status=done&width=320)
 
 ### Reset
 
-![](https://cdn.nlark.com/yuque/0/2019/gif/224563/1561712793411-86387fdf-7ca9-4430-a052-19f56913787f.gif#align=left&display=inline&height=560&originHeight=560&originWidth=320&size=0&status=done&width=320)<br />**[⬆Back to Top](#table-of-contents)**
+![](https://cdn.nlark.com/yuque/0/2019/gif/224563/1561712793411-86387fdf-7ca9-4430-a052-19f56913787f.gif#align=left&display=inline&height=560&originHeight=560&originWidth=320&size=0&status=done&width=320)
 
-## License
+[⬆Back to Top](#table-of-contents)
 
-[MIT](./LICENSE)<br />**[⬆ Back to Top](#table-of-contents)**
+## Contributing
+
+For those who are interested in contributing to this project, such as:
+
+* report a bug
+* request new feature
+* fix a bug
+* implement a new feature
+
+Please refer to our [contributing guide](https://github.com/FEMessage/.github/blob/master/CONTRIBUTING.md).
+
+[⬆ Back to Top](#table-of-contents)
 
 ## Contributors
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
-| [![](https://avatars2.githubusercontent.com/u/20613509?v=4#alt=listars&width=100)<br />**listars**](https://github.com/listars)<br />[💻](https://github.com/FEMessage/data-list/commits?author=listars) [🐛](https://github.com/FEMessage/data-list/issues?q=author%3Alistars) [📖](https://github.com/FEMessage/data-list/commits?author=listars) [💡](#example-listars) | [![](https://avatars3.githubusercontent.com/u/9384365?v=4#alt=levy&width=100)<br />**levy**](http://levy.work)<br />[👀](#review-levy9527) [🤔](#ideas-levy9527) | [![](https://avatars3.githubusercontent.com/u/19513289?v=4#alt=EVILLT&width=100)<br />**EVILLT**](https://evila.me)<br />[🚇](#infra-evillt) | [![](https://avatars3.githubusercontent.com/u/26338853?v=4#alt=OuZuYu&width=100)<br />**OuZuYu**](http://67.216.223.155/resume/)<br />[🐛](https://github.com/FEMessage/data-list/issues?q=author%3AOuZuYu) | [![](https://avatars3.githubusercontent.com/u/19591950?v=4#alt=Donald%20Shen&width=100)<br />**Donald Shen**](https://donaldshen.github.io/portfolio)<br />[🐛](https://github.com/FEMessage/data-list/issues?q=author%3Adonaldshen) [💬](#question-donaldshen) |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 
+<!-- prettier-ignore -->
+<table><tr><td align="center"><a href="https://github.com/listars"><img src="https://avatars2.githubusercontent.com/u/20613509?v=4" width="100px;" alt="listars"/><br /><sub><b>listars</b></sub></a><br /><a href="https://github.com/FEMessage/data-list/commits?author=listars" title="Code">💻</a> <a href="https://github.com/FEMessage/data-list/issues?q=author%3Alistars" title="Bug reports">🐛</a> <a href="https://github.com/FEMessage/data-list/commits?author=listars" title="Documentation">📖</a> <a href="#example-listars" title="Examples">💡</a></td><td align="center"><a href="http://levy.work"><img src="https://avatars3.githubusercontent.com/u/9384365?v=4" width="100px;" alt="levy"/><br /><sub><b>levy</b></sub></a><br /><a href="#review-levy9527" title="Reviewed Pull Requests">👀</a> <a href="#ideas-levy9527" title="Ideas, Planning, & Feedback">🤔</a></td><td align="center"><a href="https://evila.me"><img src="https://avatars3.githubusercontent.com/u/19513289?v=4" width="100px;" alt="EVILLT"/><br /><sub><b>EVILLT</b></sub></a><br /><a href="#infra-evillt" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td><td align="center"><a href="http://67.216.223.155/resume/"><img src="https://avatars3.githubusercontent.com/u/26338853?v=4" width="100px;" alt="OuZuYu"/><br /><sub><b>OuZuYu</b></sub></a><br /><a href="https://github.com/FEMessage/data-list/issues?q=author%3AOuZuYu" title="Bug reports">🐛</a></td><td align="center"><a href="https://donaldshen.github.io/portfolio"><img src="https://avatars3.githubusercontent.com/u/19591950?v=4" width="100px;" alt="Donald Shen"/><br /><sub><b>Donald Shen</b></sub></a><br /><a href="https://github.com/FEMessage/data-list/issues?q=author%3Adonaldshen" title="Bug reports">🐛</a> <a href="#question-donaldshen" title="Answering Questions">💬</a></td></tr></table>
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+## License
+
+[MIT](./LICENSE)
+
+[⬆ Back to Top](#table-of-contents)

@@ -9,7 +9,7 @@
     "url": "https://github.com/FEMessage/data-list.git"
   },
   "keywords": ["vue", "sfc", "component"],
-  "files": ["src", "dist", "yarn.lock"],
+  "files": ["src", "dist"],
   "main": "dist/data-list.umd.js",
   "module": "dist/data-list.esm.js",
   "unpkg": "dist/data-list.min.js",
@@ -68,7 +68,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "vue-sfc-cli": "1.10.1",
+  "vue-sfc-cli": "1.10.6",
   "engines": {
     "node": ">= 4.0.0",
     "npm": ">= 3.0.0"
