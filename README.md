@@ -18,7 +18,7 @@
 * [Introduction](#introduction)
   * [What is `data-list`](#what-is-data-list)
   * [Why](#why)
-* [Feature](#feature)
+* [Features](#features)
 * [Links](#links)
 * [Pre Install](#pre-install)
 * [Quick Start](#quick-start)
@@ -40,7 +40,7 @@
 
 日常需要面对大量列表渲染的场景，通常这些列表的数据处理逻辑是相似或重复的。为避免写重复代码，data-list 因此诞生了。
 
-## Feature
+## Features
 
 * 传入`url`即会请求获取数据
 * 自带下拉加载更多，分页数据处理

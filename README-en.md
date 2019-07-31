@@ -7,7 +7,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/FEMessage/data-list/pulls)
 [![Automated Release Notes by gren](https://img.shields.io/badge/%F0%9F%A4%96-release%20notes-00B2EE.svg)](https://github-tools.github.io/github-release-notes/)
 
-scroll to bottom and load more component
+Scroll to bottom and load more list items easily.
 
 ![](https://cdn.nlark.com/yuque/0/2019/gif/224563/1561712793658-9351ad70-4b43-4115-bc31-bf507781759c.gif#align=left&display=inline&height=560&originHeight=560&originWidth=320&size=0&status=done&width=320)
 
@@ -16,10 +16,10 @@ scroll to bottom and load more component
 * [Introduction](#introduction)
   * [What is `data-list`](#what-isdata-list)
   * [Why](#why)
-* [Feature](#feature)
+* [Features](#features)
 * [Links](#links)
 * [Pre Install](#pre-install)
-* [Quick start](#quick-start)
+* [Quick Start](#quick-start)
 * [Example](#example)
   * [Basic](#basic)
   * [Slot Content](#slot-content)
@@ -30,15 +30,11 @@ scroll to bottom and load more component
 
 ## Introduction
 
-### What is `data-list`
-
-`data-list` is a list rendering component, based on [v-infinite-loading](https://peachscript.github.io/vue-infinite-loading/). `data-list` is easy to use. Seting the url and dataPpath props, unlimited scrolling and loading more is ready to go
-
 ### Why
 
 In daily developement, there are lots of list rendering scenes, usually the data processing logic of these lists is similar or repeated. To avoid getting duplicate code, `data-list` is born.
 
-## Feature
+## Features
 
 * Automatically request after setting url
 * Bound with auto load more, paging data processing
@@ -52,6 +48,7 @@ In daily developement, there are lots of list rendering scenes, usually the data
 ## Links
 
 * [docs](https://FEMessage.github.io/data-list/)
+* thanks to [v-infinite-loading](https://peachscript.github.io/vue-infinite-loading/)
 
 [⬆ Back to Top](#table-of-contents)
 
@@ -73,7 +70,7 @@ Vue.prototype.$axios = axios
 
 [⬆Back to Top](#table-of-contents)
 
-## Quick start
+## Quick Start
 
 ```sh
 # Step1 安装
