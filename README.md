@@ -14,7 +14,6 @@ Scroll to bottom and load more list items easily.
 ## Table of Contents
 
 * [Introduction](#introduction)
-  * [What is `data-list`](#what-isdata-list)
   * [Why](#why)
 * [Features](#features)
 * [Links](#links)
