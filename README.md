@@ -7,16 +7,14 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/FEMessage/data-list/pulls)
 [![Automated Release Notes by gren](https://img.shields.io/badge/%F0%9F%A4%96-release%20notes-00B2EE.svg)](https://github-tools.github.io/github-release-notes/)
 
-更好用的滚动加载更多列表组件
+Scroll to bottom and load more list items easily.
 
 ![](https://cdn.nlark.com/yuque/0/2019/gif/224563/1561712793658-9351ad70-4b43-4115-bc31-bf507781759c.gif#align=left&display=inline&height=560&originHeight=560&originWidth=320&size=0&status=done&width=320)
-
-[English](./README-en.md)
 
 ## Table of Contents
 
 * [Introduction](#introduction)
-  * [What is `data-list`](#what-is-data-list)
+  * [What is `data-list`](#what-isdata-list)
   * [Why](#why)
 * [Features](#features)
 * [Links](#links)
@@ -32,49 +30,47 @@
 
 ## Introduction
 
-### What is `data-list`
-
-`data-list`组件 是基于 [v-infinite-loading](https://peachscript.github.io/vue-infinite-loading/) 封装的列表渲染组件。只需要配置 url 和 datahPath 即可进行数据处理，提供无限滚动，滑动加载更多数据等功能。
-
 ### Why
 
-日常需要面对大量列表渲染的场景，通常这些列表的数据处理逻辑是相似或重复的。为避免写重复代码，data-list 因此诞生了。
+In daily developement, there are lots of list rendering scenes, usually the data processing logic of these lists is similar or repeated. To avoid getting duplicate code, `data-list` is born.
 
 ## Features
 
-* 传入`url`即会请求获取数据
-* 自带下拉加载更多，分页数据处理
-* 自动判断当前第几页，是否已到尾页、并且停止数据的加载
-* 支持获取不到数据、没有更多数据、请求错误等场景的提示语（可自定义）
-* 可以保存列表滚动状态，访问详情页后返回或页面刷新，能恢复之前的滚动位置
+* Automatically request after setting url
+* Bound with auto load more, paging data processing
+* Support storage request parameters, you can turn up the page to get the previous page data, get the next page data down
+* Automatically judge the current page, whether it has reached the bottom and stop loading data
+* Support for scenes such as no data, no more data, request errors, etc. (customizable)
+* Support saving scrolling status, can return to the previous scrolling position after router go back or page reload
 
-[⬆ Back to Top](#table-of-contents)
+[⬆Back to Top](#table-of-contents)
 
 ## Links
 
 * [docs](https://FEMessage.github.io/data-list/)
+* thanks to [v-infinite-loading](https://peachscript.github.io/vue-infinite-loading/)
 
 [⬆ Back to Top](#table-of-contents)
 
 ## Pre Install
 
-先确保你已经正确安装了`axios`
+Make sure you have installed it correctly `axios`
 
-```sh
+```bash
 yarn add axios
 ```
 
-然后在全局注册`axios`
+Then register globally `axios`
 
-```js
+```javascript
 import Vue from 'vue'
 import axios from 'axios'
 Vue.prototype.$axios = axios
 ```
 
-[⬆ Back to Top](#table-of-contents)
+[⬆Back to Top](#table-of-contents)
 
-## Quick start
+## Quick Start
 
 ```sh
 # Step1 安装
@@ -106,7 +102,7 @@ export default {
 </script>
 ```
 
-[⬆ Back to Top](#table-of-contents)
+[⬆Back to Top](#table-of-contents)
 
 ## Example
 
@@ -122,7 +118,7 @@ export default {
 
 ![](https://cdn.nlark.com/yuque/0/2019/gif/224563/1561712793411-86387fdf-7ca9-4430-a052-19f56913787f.gif#align=left&display=inline&height=560&originHeight=560&originWidth=320&size=0&status=done&width=320)
 
-[⬆ Back to Top](#table-of-contents)
+[⬆Back to Top](#table-of-contents)
 
 ## Contributing
 
