@@ -8,7 +8,7 @@
     "type": "git",
     "url": "https://github.com/FEMessage/data-list.git"
   },
-  "keywords": ["vue", "sfc", "component"],
+  "keywords": ["vue", "load-more", "list"],
   "files": ["src", "dist"],
   "main": "dist/data-list.umd.js",
   "module": "dist/data-list.esm.js",
