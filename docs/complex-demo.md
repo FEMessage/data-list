@@ -1,16 +1,15 @@
-页面比较复杂的场景
 
 ```vue
 <template>
   <div style="height: 400px; overflow: auto">
     <div :style="tabs">
       <div :style="tabsWrap">
-        <div :style="tabsNav">导航条</div>
+        <div :style="tabsNav">nav1</div>
       </div>
       <div :style="tabsContent">
         <div :style="tabs">
           <div :style="tabsWrap">
-            <div :style="tabsNav">导航条2</div>
+            <div :style="tabsNav">nav2</div>
           </div>
           <div :style="tabsContent">
             <data-list ref="dataList" :url="url" direction="top" :size="20">
