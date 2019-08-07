@@ -8,16 +8,8 @@
     "type": "git",
     "url": "https://github.com/FEMessage/data-list.git"
   },
-  "keywords": [
-    "vue",
-    "sfc",
-    "component"
-  ],
-  "files": [
-    "src",
-    "dist",
-    "yarn.lock"
-  ],
+  "keywords": ["vue", "load-more", "list"],
+  "files": ["src", "dist"],
   "main": "dist/data-list.umd.js",
   "module": "dist/data-list.esm.js",
   "unpkg": "dist/data-list.min.js",
@@ -28,10 +20,14 @@
     "dev": "vue-styleguidist server",
     "test": "jest",
     "doc": "vue-styleguidist build",
-    "build": "npm run build:unpkg & npm run build:es & npm run build:umd & npm run doc",
-    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/data-list.umd.js",
-    "build:es": "rollup --config build/rollup.config.js --format es --file dist/data-list.esm.js",
-    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/data-list.min.js",
+    "build":
+      "npm run build:unpkg & npm run build:es & npm run build:umd & npm run doc",
+    "build:umd":
+      "rollup --config build/rollup.config.js --format umd --file dist/data-list.umd.js",
+    "build:es":
+      "rollup --config build/rollup.config.js --format es --file dist/data-list.esm.js",
+    "build:unpkg":
+      "rollup --config build/rollup.config.js --format iife --file dist/data-list.min.js",
     "precommit": "pretty-quick --staged",
     "stdver": "standard-version -m '[skip ci] chore(release): v%s'",
     "release": "gren release --override"
@@ -72,7 +68,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "vue-sfc-cli": "1.10.1",
+  "vue-sfc-cli": "1.10.6",
   "engines": {
     "node": ">= 4.0.0",
     "npm": ">= 3.0.0"

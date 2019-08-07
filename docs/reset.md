@@ -1,7 +1,7 @@
 ```vue
 <template>
   <div>
-    <button @click="reset">重置</button>
+    <button @click="reset">reset</button>
     <div style="height: 400px; overflow: auto">
       <data-list ref="dataList" :url="url">
         <ul slot-scope="props">
