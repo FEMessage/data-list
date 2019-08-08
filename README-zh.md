@@ -15,20 +15,20 @@
 
 ## Table of Contents
 
-* [Introduction](#introduction)
-  * [What is `data-list`](#what-is-data-list)
-  * [Why](#why)
-* [Features](#features)
-* [Links](#links)
-* [Pre Install](#pre-install)
-* [Quick Start](#quick-start)
-* [Example](#example)
-  * [Basic](#basic)
-  * [Slot Content](#slot-content)
-  * [Reset](#reset)
-* [Contributing](#contributing)
-* [Contributors](#contributors)
-* [License](#license)
+- [Introduction](#introduction)
+  - [What is `data-list`](#what-is-data-list)
+  - [Why](#why)
+- [Features](#features)
+- [Links](#links)
+- [Pre Install](#pre-install)
+- [Quick Start](#quick-start)
+- [Example](#example)
+  - [Basic](#basic)
+  - [Slot Content](#slot-content)
+  - [Reset](#reset)
+- [Contributing](#contributing)
+- [Contributors](#contributors)
+- [License](#license)
 
 ## Introduction
 
@@ -42,17 +42,17 @@
 
 ## Features
 
-* 传入`url`即会请求获取数据
-* 自带下拉加载更多，分页数据处理
-* 自动判断当前第几页，是否已到尾页、并且停止数据的加载
-* 支持获取不到数据、没有更多数据、请求错误等场景的提示语（可自定义）
-* 可以保存列表滚动状态，访问详情页后返回或页面刷新，能恢复之前的滚动位置
+- 传入`url`即会请求获取数据
+- 自带下拉加载更多，分页数据处理
+- 自动判断当前第几页，是否已到尾页、并且停止数据的加载
+- 支持获取不到数据、没有更多数据、请求错误等场景的提示语（可自定义）
+- 可以保存列表滚动状态，访问详情页后返回或页面刷新，能恢复之前的滚动位置
 
 [⬆ Back to Top](#table-of-contents)
 
 ## Links
 
-* [docs](https://FEMessage.github.io/data-list/)
+- [docs](https://FEMessage.github.io/data-list/)
 
 [⬆ Back to Top](#table-of-contents)
 
@@ -87,7 +87,7 @@ yarn add @femessage/data-list
   <data-list ref="dataList" :url="url">
     <ul slot-scope="props">
       <li v-for="(item, index) in props.list" :key="index">
-        {{item.name}}
+        {{ item.name }}
       </li>
     </ul>
   </data-list>
@@ -128,10 +128,10 @@ export default {
 
 For those who are interested in contributing to this project, such as:
 
-* report a bug
-* request new feature
-* fix a bug
-* implement a new feature
+- report a bug
+- request new feature
+- fix a bug
+- implement a new feature
 
 Please refer to our [contributing guide](https://github.com/FEMessage/.github/blob/master/CONTRIBUTING.md).
 

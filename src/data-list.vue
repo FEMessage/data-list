@@ -277,7 +277,7 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="less">
 .data-list {
   @keyframes tipHidden {
     from {
@@ -290,6 +290,7 @@ export default {
       height: 0;
     }
   }
+
   .loaded-tip {
     height: 0;
     opacity: 0;
