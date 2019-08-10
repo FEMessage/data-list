@@ -21,6 +21,7 @@ const config = {
     }),
     babel({
       runtimeHelpers: true,
+      extensions: ['.js', '.jsx', '.es6', '.es', '.mjs', '.vue'],
       exclude: 'node_modules/**'
     })
   ]
