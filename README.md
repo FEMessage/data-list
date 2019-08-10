@@ -13,19 +13,19 @@ Scroll to bottom and load more list items easily.
 
 ## Table of Contents
 
-* [Introduction](#introduction)
-  * [Why](#why)
-* [Features](#features)
-* [Links](#links)
-* [Pre Install](#pre-install)
-* [Quick Start](#quick-start)
-* [Example](#example)
-  * [Basic](#basic)
-  * [Slot Content](#slot-content)
-  * [Reset](#reset)
-* [Contributing](#contributing)
-* [Contributors](#contributors)
-* [License](#license)
+- [Introduction](#introduction)
+  - [Why](#why)
+- [Features](#features)
+- [Links](#links)
+- [Pre Install](#pre-install)
+- [Quick Start](#quick-start)
+- [Example](#example)
+  - [Basic](#basic)
+  - [Slot Content](#slot-content)
+  - [Reset](#reset)
+- [Contributing](#contributing)
+- [Contributors](#contributors)
+- [License](#license)
 
 ## Introduction
 
@@ -35,19 +35,19 @@ In daily developement, there are lots of list rendering scenes, usually the data
 
 ## Features
 
-* Automatically request after setting url
-* Bound with auto load more, paging data processing
-* Support storage request parameters, you can turn up the page to get the previous page data, get the next page data down
-* Automatically judge the current page, whether it has reached the bottom and stop loading data
-* Support for scenes such as no data, no more data, request errors, etc. (customizable)
-* Support saving scrolling status, can return to the previous scrolling position after router go back or page reload
+- Automatically request after setting url
+- Bound with auto load more, paging data processing
+- Support storage request parameters, you can turn up the page to get the previous page data, get the next page data down
+- Automatically judge the current page, whether it has reached the bottom and stop loading data
+- Support for scenes such as no data, no more data, request errors, etc. (customizable)
+- Support saving scrolling status, can return to the previous scrolling position after router go back or page reload
 
 [⬆Back to Top](#table-of-contents)
 
 ## Links
 
-* [docs](https://FEMessage.github.io/data-list/)
-* thanks to [v-infinite-loading](https://peachscript.github.io/vue-infinite-loading/)
+- [docs](https://FEMessage.github.io/data-list/)
+- thanks to [v-infinite-loading](https://peachscript.github.io/vue-infinite-loading/)
 
 [⬆ Back to Top](#table-of-contents)
 
@@ -82,7 +82,7 @@ yarn add @femessage/data-list
   <data-list ref="dataList" :url="url">
     <ul slot-scope="props">
       <li v-for="(item, index) in props.list" :key="index">
-        {{item.name}}
+        {{ item.name }}
       </li>
     </ul>
   </data-list>
@@ -123,10 +123,10 @@ export default {
 
 For those who are interested in contributing to this project, such as:
 
-* report a bug
-* request new feature
-* fix a bug
-* implement a new feature
+- report a bug
+- request new feature
+- fix a bug
+- implement a new feature
 
 Please refer to our [contributing guide](https://github.com/FEMessage/.github/blob/master/CONTRIBUTING.md).
 
