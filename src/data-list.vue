@@ -22,6 +22,9 @@
       <div slot="error">
         <slot name="error">网络异常，请刷新重试</slot>
       </div>
+
+      <!--@slot 自定义spinner-->
+      <slot name="spinner" slot="spinner"></slot>
     </infinite-loading>
 
     <!--@slot 自定义列表内容-->
@@ -42,6 +45,8 @@
       <slot name="no-results" slot="no-results">暂时没有数据</slot>
       <!--@slot 该信息将会在加载出现错误时呈现给用户-->
       <slot name="error" slot="error">网络异常，请刷新重试</slot>
+      <!--@slot 自定义spinner-->
+      <slot name="spinner" slot="spinner"></slot>
     </infinite-loading>
   </div>
 </template>
