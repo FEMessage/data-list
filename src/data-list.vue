@@ -235,6 +235,10 @@ export default {
         const totalPages = _get(resp, this.totalPagesPath, 0)
         if (isDirectionDown && this.nextPage > totalPages) {
           $state.complete()
+          /**
+           * 请求到底 complete 事件
+           */
+          this.$emit('complete')
           // 防止总页数只有第一页的情况
           if (totalPages != defaultFirstPage) this.updatePrevDistance()
         }
