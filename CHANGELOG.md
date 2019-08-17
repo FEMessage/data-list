@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/FEMessage/data-list/compare/v1.1.8...v1.2.0) (2019-08-17)
+
+
+### Features
+
+* 支持 slot=spinner ([37c534a](https://github.com/FEMessage/data-list/commit/37c534a))
+* 支持加载到底事件 complete ([7331ed2](https://github.com/FEMessage/data-list/commit/7331ed2)), closes [#58](https://github.com/FEMessage/data-list/issues/58)
+
+
+
 ### [1.1.8](https://github.com/FEMessage/data-list/compare/v1.1.7...v1.1.8) (2019-08-10)
 
 
