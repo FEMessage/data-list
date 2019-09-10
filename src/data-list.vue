@@ -272,6 +272,10 @@ export default {
         this.updatePrevDistance
       )
     },
+    /**
+     * 重新所有参数，并刷新列表
+     * @public
+     */
     reset() {
       this.list = []
       this.nextPage = defaultFirstPage
