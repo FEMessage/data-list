@@ -74,12 +74,12 @@ Vue.prototype.$axios = axios
 ## Quick Start
 
 ```sh
-# Step1 安装
+# install
 yarn add @femessage/data-list
 ```
 
 ```vue
-// Step2 在需要渲染列表的 .vue 文件中
+// use it in .vue files
 <template>
   <data-list ref="dataList" :url="url">
     <ul slot-scope="props">
