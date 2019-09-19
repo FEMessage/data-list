@@ -11,6 +11,8 @@ Scroll to bottom and load more list items easily.
 
 ![](https://cdn.nlark.com/yuque/0/2019/gif/224563/1561712793658-9351ad70-4b43-4115-bc31-bf507781759c.gif#align=left&display=inline&height=560&originHeight=560&originWidth=320&size=0&status=done&width=320)
 
+[中文文档](./README-zh.md)
+
 ## Table of Contents
 
 - [Introduction](#introduction)
