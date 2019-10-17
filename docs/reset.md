@@ -17,7 +17,7 @@
 export default {
   data() {
     return {
-      url: 'https://easy-mock.com/mock/5c323f1b2188f1589db6af5f/data-list',
+      url: 'https://mockapi.eolinker.com/IeZWjzy87c204a1f7030b2a17b00f3776ce0a07a5030a1b/data-list',
     }
   },
   methods: {
