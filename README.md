@@ -11,6 +11,8 @@ Scroll to bottom and load more list items easily.
 
 ![](https://cdn.nlark.com/yuque/0/2019/gif/224563/1561712793658-9351ad70-4b43-4115-bc31-bf507781759c.gif#align=left&display=inline&height=560&originHeight=560&originWidth=320&size=0&status=done&width=320)
 
+[中文文档](./README-zh.md)
+
 ## Table of Contents
 
 - [Introduction](#introduction)
@@ -72,12 +74,12 @@ Vue.prototype.$axios = axios
 ## Quick Start
 
 ```sh
-# Step1 安装
+# install
 yarn add @femessage/data-list
 ```
 
 ```vue
-// Step2 在需要渲染列表的 .vue 文件中
+// use it in .vue files
 <template>
   <data-list ref="dataList" :url="url">
     <ul slot-scope="props">
@@ -94,7 +96,8 @@ export default {
   components: {DataList},
   data() {
     return {
-      url: 'https://easy-mock.com/mock/5c323f1b2188f1589db6af5f/data-list'
+      url:
+        'https://mockapi.eolinker.com/IeZWjzy87c204a1f7030b2a17b00f3776ce0a07a5030a1b/data-list'
     }
   }
 }
