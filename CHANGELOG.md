@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/FEMessage/data-list/compare/v1.2.0...v1.2.1) (2019-10-17)
+
+
+### Bug Fixes
+
+* 回到顶部后reset请求未重新发出的bug ([#79](https://github.com/FEMessage/data-list/issues/79)) ([37f643c](https://github.com/FEMessage/data-list/commit/37f643c))
+
+
+
 ## [1.2.0](https://github.com/FEMessage/data-list/compare/v1.1.8...v1.2.0) (2019-08-17)
 
 
