@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.2](https://github.com/FEMessage/data-list/compare/v1.2.1...v1.2.2) (2019-10-21)
+
+
+### Bug Fixes
+
+* content和totalPages的某些组合会导致无限loading ([#81](https://github.com/FEMessage/data-list/issues/81)) ([0bd8fc8](https://github.com/FEMessage/data-list/commit/0bd8fc8))
+
+
+
 ### [1.2.1](https://github.com/FEMessage/data-list/compare/v1.2.0...v1.2.1) (2019-10-17)
 
 
