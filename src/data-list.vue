@@ -203,7 +203,8 @@ export default {
         const action = isDirectionDown ? 'push' : 'unshift'
         this.list[action](...data)
 
-        if (!!this.list.length) $state.loaded()
+        if (this.list.length === 0) return $state.complete()
+        $state.loaded()
         /**
          * 请求完loaded事件
          * @property {array} list - 列表数据
@@ -211,10 +212,18 @@ export default {
          */
         this.$emit('loaded', [...this.list], resp)
 
-        const totalPages = _get(resp, this.totalPagesPath, 0)
+        /**
+         * data-list约定后端返回的页码范围是 defaultFirstPage ~ totalPages
+         * 如果没有 totalPages 或 page 越界但仍有数据（nextPage > totalPages || prevPage < defaultFirstPage）
+         * data-list只能立即complete
+         */
+        const totalPages = _get(resp, this.totalPagesPath, null)
+        if (totalPages === null)
+          console.warn('totalPages 字段不存在，请传入正确的 totalPagesPath')
         if (
-          (isDirectionDown && this.nextPage === totalPages) ||
-          (!isDirectionDown && this.prevPage === defaultFirstPage)
+          totalPages === null ||
+          (isDirectionDown && this.nextPage >= totalPages) ||
+          (!isDirectionDown && this.prevPage <= defaultFirstPage)
         ) {
           $state.complete()
           /**
