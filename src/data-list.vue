@@ -27,9 +27,7 @@
     </infinite-loading>
 
     <!--@slot 自定义列表内容-->
-    <slot :list="list">
-      自定义列表内容
-    </slot>
+    <slot :list="list" />
 
     <infinite-loading
       @infinite="getList($event, true)"
