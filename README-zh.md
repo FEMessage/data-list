@@ -9,7 +9,7 @@
 
 更好用的滚动加载更多列表组件
 
-![](https://cdn.nlark.com/yuque/0/2019/gif/224563/1561712793658-9351ad70-4b43-4115-bc31-bf507781759c.gif#align=left&display=inline&height=560&originHeight=560&originWidth=320&size=0&status=done&width=320)
+![](https://i.loli.net/2019/11/15/H2uRgN8fsp4YDkW.gif)
 
 [English](./README-en.md)
 
@@ -113,15 +113,15 @@ export default {
 
 ### Basic
 
-![](https://cdn.nlark.com/yuque/0/2019/gif/224563/1561712793428-d597adc3-e741-443e-9c52-65fa5ae46b89.gif#align=left&display=inline&height=560&originHeight=560&originWidth=320&size=0&status=done&width=320)
+![](https://i.loli.net/2019/11/15/etjM5F3Z2uhk8J6.gif)
 
 ### Slot Content
 
-![](https://cdn.nlark.com/yuque/0/2019/gif/224563/1561712793541-047e59ab-6487-4000-96f3-505e236e2323.gif#align=left&display=inline&height=560&originHeight=560&originWidth=320&size=0&status=done&width=320)
+![](https://i.loli.net/2019/11/15/7t5wiNqugCe4ohW.gif)
 
 ### Reset
 
-![](https://cdn.nlark.com/yuque/0/2019/gif/224563/1561712793411-86387fdf-7ca9-4430-a052-19f56913787f.gif#align=left&display=inline&height=560&originHeight=560&originWidth=320&size=0&status=done&width=320)
+![](https://i.loli.net/2019/11/15/w3mnFU6oXBpLsI8.gif)
 
 [⬆ Back to Top](#table-of-contents)
 
