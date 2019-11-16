@@ -201,7 +201,11 @@ export default {
         const action = isDirectionDown ? 'push' : 'unshift'
         this.list[action](...data)
 
-        if (this.list.length === 0) return $state.complete()
+        if (this.list.length === 0) {
+          $state.complete()
+          this.$emit('complete')
+          return
+        }
         $state.loaded()
         /**
          * 请求完loaded事件
