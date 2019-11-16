@@ -9,7 +9,7 @@
 
 Scroll to bottom and load more list items easily.
 
-![](https://cdn.nlark.com/yuque/0/2019/gif/224563/1561712793658-9351ad70-4b43-4115-bc31-bf507781759c.gif#align=left&display=inline&height=560&originHeight=560&originWidth=320&size=0&status=done&width=320)
+![](https://i.loli.net/2019/11/15/H2uRgN8fsp4YDkW.gif)
 
 [中文文档](./README-zh.md)
 
@@ -110,15 +110,15 @@ export default {
 
 ### Basic
 
-![](https://cdn.nlark.com/yuque/0/2019/gif/224563/1561712793428-d597adc3-e741-443e-9c52-65fa5ae46b89.gif#align=left&display=inline&height=560&originHeight=560&originWidth=320&size=0&status=done&width=320)
+![](https://i.loli.net/2019/11/15/etjM5F3Z2uhk8J6.gif)
 
 ### Slot Content
 
-![](https://cdn.nlark.com/yuque/0/2019/gif/224563/1561712793541-047e59ab-6487-4000-96f3-505e236e2323.gif#align=left&display=inline&height=560&originHeight=560&originWidth=320&size=0&status=done&width=320)
+![](https://i.loli.net/2019/11/15/7t5wiNqugCe4ohW.gif)
 
 ### Reset
 
-![](https://cdn.nlark.com/yuque/0/2019/gif/224563/1561712793411-86387fdf-7ca9-4430-a052-19f56913787f.gif#align=left&display=inline&height=560&originHeight=560&originWidth=320&size=0&status=done&width=320)
+![](https://i.loli.net/2019/11/15/w3mnFU6oXBpLsI8.gif)
 
 [⬆Back to Top](#table-of-contents)
 
@@ -140,9 +140,17 @@ Please refer to our [contributing guide](https://github.com/FEMessage/.github/bl
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-
 <!-- prettier-ignore -->
-<table><tr><td align="center"><a href="https://github.com/listars"><img src="https://avatars2.githubusercontent.com/u/20613509?v=4" width="100px;" alt="listars"/><br /><sub><b>listars</b></sub></a><br /><a href="https://github.com/FEMessage/data-list/commits?author=listars" title="Code">💻</a> <a href="https://github.com/FEMessage/data-list/issues?q=author%3Alistars" title="Bug reports">🐛</a> <a href="https://github.com/FEMessage/data-list/commits?author=listars" title="Documentation">📖</a> <a href="#example-listars" title="Examples">💡</a></td><td align="center"><a href="http://levy.work"><img src="https://avatars3.githubusercontent.com/u/9384365?v=4" width="100px;" alt="levy"/><br /><sub><b>levy</b></sub></a><br /><a href="#review-levy9527" title="Reviewed Pull Requests">👀</a> <a href="#ideas-levy9527" title="Ideas, Planning, & Feedback">🤔</a></td><td align="center"><a href="https://evila.me"><img src="https://avatars3.githubusercontent.com/u/19513289?v=4" width="100px;" alt="EVILLT"/><br /><sub><b>EVILLT</b></sub></a><br /><a href="#infra-evillt" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td><td align="center"><a href="http://67.216.223.155/resume/"><img src="https://avatars3.githubusercontent.com/u/26338853?v=4" width="100px;" alt="OuZuYu"/><br /><sub><b>OuZuYu</b></sub></a><br /><a href="https://github.com/FEMessage/data-list/issues?q=author%3AOuZuYu" title="Bug reports">🐛</a></td><td align="center"><a href="https://donaldshen.github.io/portfolio"><img src="https://avatars3.githubusercontent.com/u/19591950?v=4" width="100px;" alt="Donald Shen"/><br /><sub><b>Donald Shen</b></sub></a><br /><a href="https://github.com/FEMessage/data-list/issues?q=author%3Adonaldshen" title="Bug reports">🐛</a> <a href="#question-donaldshen" title="Answering Questions">💬</a></td></tr></table>
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/listars"><img src="https://avatars2.githubusercontent.com/u/20613509?v=4" width="100px;" alt="listars"/><br /><sub><b>listars</b></sub></a><br /><a href="https://github.com/FEMessage/data-list/commits?author=listars" title="Code">💻</a> <a href="https://github.com/FEMessage/data-list/issues?q=author%3Alistars" title="Bug reports">🐛</a> <a href="https://github.com/FEMessage/data-list/commits?author=listars" title="Documentation">📖</a> <a href="#example-listars" title="Examples">💡</a></td>
+    <td align="center"><a href="http://levy.work"><img src="https://avatars3.githubusercontent.com/u/9384365?v=4" width="100px;" alt="levy"/><br /><sub><b>levy</b></sub></a><br /><a href="#review-levy9527" title="Reviewed Pull Requests">👀</a> <a href="#ideas-levy9527" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://evila.me"><img src="https://avatars3.githubusercontent.com/u/19513289?v=4" width="100px;" alt="EVILLT"/><br /><sub><b>EVILLT</b></sub></a><br /><a href="#infra-evillt" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
+    <td align="center"><a href="http://67.216.223.155/resume/"><img src="https://avatars3.githubusercontent.com/u/26338853?v=4" width="100px;" alt="OuZuYu"/><br /><sub><b>OuZuYu</b></sub></a><br /><a href="https://github.com/FEMessage/data-list/issues?q=author%3AOuZuYu" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://donaldshen.github.io/portfolio"><img src="https://avatars3.githubusercontent.com/u/19591950?v=4" width="100px;" alt="Donald Shen"/><br /><sub><b>Donald Shen</b></sub></a><br /><a href="https://github.com/FEMessage/data-list/issues?q=author%3Adonaldshen" title="Bug reports">🐛</a> <a href="#question-donaldshen" title="Answering Questions">💬</a></td>
+    <td align="center"><a href="https://github.com/zcqno1"><img src="https://avatars0.githubusercontent.com/u/11766057?v=4" width="100px;" alt="Sponge"/><br /><sub><b>Sponge</b></sub></a><br /><a href="https://github.com/FEMessage/data-list/issues?q=author%3Azcqno1" title="Bug reports">🐛</a></td>
+  </tr>
+</table>
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
