@@ -1,3 +1,13 @@
+## 为什么数据为空时不会触发 loaded 事件
+可能有些小伙伴以为 loaded 事件会在每次下/上拉发起数据请求结束时触发，但其实只对了一半：
+- loaded 事件仅在真正获取到数据时（payload数组长度大于0）触发，可以理解为这时真正有数据被“loaded”；
+- complete 事件在获取数据为空时触发。
+也就是说这两个事件加起来才代表着：“用户每次下/上拉刷新后的时机”
+
+那这样区分的好处是：组件可以知道什么时候该展示 slot-no-results（列表完全没内容时的友好提示）而什么时候该展示 slot-no-more（提示用户别再下拉）并不再监听用户下拉动作
+
+这里对应的是内部使用的 [vue-infinite-loading 组件逻辑](https://peachscript.github.io/vue-infinite-loading/zh/api/#%E4%BA%8B%E4%BB%B6)，有兴趣的同学可以花一分钟看一下
+
 ## 有时会出现加载多次或者无法加载的问题
 加载多次和无法加载都是复杂的页面布局导致组件监听的滚动元素异常的问题，这些问题都不应该是组件去处理
 
@@ -17,7 +27,7 @@
 * 指定监听的滚动元素（避免错乱布局造成的多次请求或者不发送请求）
 
 ```html
-<div style="overflow-y: auto">
+<div style="overflow-y: auto;">
   <data-list ref="dataList" :url="url" force-use-infinite-wrapper></data-list>
 </div>
 ```
