@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/FEMessage/data-list/compare/v1.2.4...v1.3.0) (2020-07-31)
+
+
+### Bug Fixes
+
+* netlify.sh ([fe3301c](https://github.com/FEMessage/data-list/commit/fe3301c))
+
+
+### Features
+
+* 处理业务异常情况 ([#103](https://github.com/FEMessage/data-list/issues/103)) ([644e9a2](https://github.com/FEMessage/data-list/commit/644e9a2))
+
+
+
 ### [1.2.4](https://github.com/FEMessage/data-list/compare/v1.2.3...v1.2.4) (2019-11-16)
 
 
