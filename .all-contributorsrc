@@ -77,7 +77,18 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "PPPenny",
+      "name": "PPPenny",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/20984729?v=4",
+      "profile": "https://github.com/PPPenny",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
-  "contributorsPerLine": 7
+  "contributorsPerLine": 7,
+  "skipCi": true
 }
