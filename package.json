@@ -23,6 +23,7 @@
   "browser": {
     "./sfc": "src/data-list.vue"
   },
+  "types": "src/data-list.d.ts",
   "scripts": {
     "dev": "vue-styleguidist server",
     "test": "jest",
