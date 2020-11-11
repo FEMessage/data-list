@@ -37,3 +37,17 @@
 在移动端使用多 Tabs 切换 data-list 列表时，如果当前 tab 的 data-list 正在 loading，同时去切换 tab，前一个 data-list 的数据会被更新到，后一个 data-list 中
 
 为了防止这种情况，可以[监听 loading 事件](https://femessage.github.io/data-list/#/Components?id=datalist)，当 data-list loading 时，禁止切换 Tabs。
+
+## 在 TypeScript 中指定组件的类型
+
+```html
+<script lang="ts">
+// 需要引入这个
+// import { DataListType } from '@femessage/data-list'
+export default {
+  mounted() {
+    (this.$refs.dataList as DataListType).reset()
+  },
+}
+</script>
+```
